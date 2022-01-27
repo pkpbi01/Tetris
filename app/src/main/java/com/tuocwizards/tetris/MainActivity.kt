@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import com.google.android.material.snackbar.Snackbar
 import com.tuocwizards.tetris.storage.AppPreferences
 import kotlin.system.exitProcess
 
@@ -34,6 +35,8 @@ class MainActivity : AppCompatActivity() {
     private fun onBtnResetScore(view: View) {
         val preferences = AppPreferences(this)
         preferences.clearHighScore()
+        Snackbar.make(view, "Score successfully rest", Snackbar.LENGTH_SHORT).show()
+        tvHighScore?.text = "High score: ${preferences.getHighScore()}"
     }
 
     private fun onBtnExit(view: View) {
