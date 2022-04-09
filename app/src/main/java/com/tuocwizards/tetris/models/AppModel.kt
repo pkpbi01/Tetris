@@ -141,9 +141,9 @@ class AppModel {
                 val isEmpty = CellConstants.EMPTY.value == status
                 if (isEmpty)
                     emptyCells++
-                if (emptyCells == 0)
-                    shiftRows(i)
             }
+            if (emptyCells == 0)
+                shiftRows(i)
         }
     }
 
@@ -161,7 +161,6 @@ class AppModel {
                 }
             }
         }
-
     }
 
     private fun blockAdditionPossible(): Boolean {
