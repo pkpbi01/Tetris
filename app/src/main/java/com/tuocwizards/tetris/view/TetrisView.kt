@@ -107,7 +107,7 @@ class TetrisView: View {
         }
     }
 
-    private fun drawCell(canvas: Canvas, row: Int, column: Int, rgbColor: Int) {
+    private fun drawCell(canvas: Canvas, x: Int, y: Int, rgbColor: Int) {
         paint.color = rgbColor
         val top: Float = (frameOffset.height + y * cellSize.height + BLOCK_OFFSET).toFloat()
         val left: Float = (frameOffset.width + x * cellSize.width + BLOCK_OFFSET).toFloat()

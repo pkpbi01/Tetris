@@ -1,6 +1,6 @@
 package com.tuocwizards.tetris.models
 
-enum class Shape(val frameNumber: Int, val startPosition: Int) {
+enum class Shape(val frameCount: Int, val startPosition: Int) {
     Tetromino1(1, 1) {
         override fun getFrame(frameNumber: Int): Frame {
             return Frame(2)
